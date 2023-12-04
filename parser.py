@@ -29,7 +29,7 @@ def parse_gamelist(xml_file, output_file):
 
             # If there are missing tags, add an entry to the results list
             if missing_tags:
-                results.append(f"{name} found with missing tags: {', '.join(missing_tags)}.")
+                results.append(f"{name} found with missing tags: {', '.join(missing_tags)}")
 
     # If there are results, write them to an output file
     if results:
