@@ -17,6 +17,6 @@ A simple python script to parse gamelist.xml files and sort them alphabetically 
 Usage: ```python sorter.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories.
 
 # Cleaner
-A simple python script to find and remove gamelist.xml.\* files.
+A simple python script to find and remove gamelist.xml.\* files (excluding gamelist.xml and gamelist.xml.old)
 
 Usage: ```python parser.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories. Look for output.txt files in a folder created next to wherever you put _parser.py_.
