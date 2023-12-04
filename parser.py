@@ -22,14 +22,19 @@ def parse_gamelist(xml_file, output_file):
             name = name_element.text
             missing_tags = []
 
+            # Check for missing or garbage data in the 'releasedate' tag
+            releasedate_element = game_element.find('releasedate')
+            if releasedate_element is None or releasedate_element.text == '19691231T190000':
+                missing_tags.append('releasedate')
+
             # Check for missing tags in each game entry
-            for tag in ['desc', 'image', 'video', 'releasedate', 'developer', 'publisher', 'genre']:
+            for tag in ['desc', 'image', 'video', 'developer', 'publisher', 'genre']:
                 if game_element.find(tag) is None:
                     missing_tags.append(tag)
 
             # If there are missing tags, add an entry to the results list
             if missing_tags:
-                results.append(f"{name} found with missing tags: {', '.join(missing_tags)}.")
+                results.append(f"{name} found with missing tags: {', '.join(missing_tags)}")
 
     # If there are results, write them to an output file
     if results:
