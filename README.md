@@ -12,7 +12,7 @@ Landstalker found with missing tags: video
 ```
 
 # Sorter
-A simple python script to parse gamelist.xml files and sort them alphabetically by the <name> tag. Creates backups before parsing.
+A simple python script to parse gamelist.xml files and sort them alphabetically by the name tag. Creates backups before parsing.
 
 Usage: ```python sorter.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories.
 
