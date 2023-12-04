@@ -19,4 +19,4 @@ Usage: ```python sorter.py``` and type your roms directory e.g. ```\\RG351P\roms
 # Cleaner
 A simple python script to find and remove gamelist.xml.\* files (excluding gamelist.xml and gamelist.xml.old)
 
-Usage: ```python parser.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories.
+Usage: ```python cleaner.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories.
