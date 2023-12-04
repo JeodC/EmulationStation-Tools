@@ -1,5 +1,4 @@
 import os
-import sys
 import xml.etree.ElementTree as ET
 
 def parse_gamelist(xml_file, output_file):
@@ -42,6 +41,15 @@ def parse_gamelist(xml_file, output_file):
         with open(output_file, 'w') as output:
             output.write('\n'.join(results))
 
+def scan_directory():
+    # Prompt user for the directory path
+    directory = input("Enter the path to your roms folder: ")
+
+    # Check if the directory exists
+    if not os.path.exists(directory):
+        print(f"The directory '{directory}' does not exist.")
+        return
+
     # Get the directory of the script
     script_directory = os.path.dirname(os.path.abspath(__file__))
     # Create a folder for output files next to the script
@@ -66,15 +74,6 @@ def parse_gamelist(xml_file, output_file):
                         output_file_path = os.path.join(output_folder, f'{subdir}_output.txt')
                         # Parse the 'gamelist.xml' file and write results to the output file
                         parse_gamelist(xml_file_path, output_file_path)
-                        
-if __name__ == '__main__':
-    directory = sys.argv[1]
-    if directory is None:
-        # Prompt user for the directory path
-        directory = input("Enter the path to your roms folder: ")
 
-       # Check if the directory exists
-        if not os.path.exists(directory):
-            print(f"The directory '{directory}' does not exist.")
-            exit(1)
-        scan_directory(directory)
+# Example usage
+scan_directory()
