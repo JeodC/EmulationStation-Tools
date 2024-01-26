@@ -18,3 +18,6 @@ Usage: ```python sorter.py``` and type your roms directory e.g. ```\\RG351P\roms
 
 # Sortparse
 A combined version of the above scripts.
+
+# Savebackup
+A tool that scans immediate directories in the `roms` folder and copies savedata to `saves` next to _savebackup.py_. The script copies Dreamcast memory cards (`bios/dc`) and other emulator savedata `.srm` and `.sav`. The file extensions searched can be modified in the script.
