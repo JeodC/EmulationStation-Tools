@@ -19,9 +19,9 @@ A simple python script to parse gamelist.xml files and sort them alphabetically 
 
 Usage: ```python sorter.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories.
 
-# Savebackup
+## Savebackup
 A tool that scans immediate directories in the `roms` folder and copies savedata to `saves` next to _savebackup.py_. The script copies Dreamcast memory cards (`bios/dc`) and other emulator savedata `.srm` and `.sav`. 
 The file extensions searched can be modified in the script. Because of the complexity of the `roms/ports` folder, it is excluded from the scan.
 
 ## CRC32
-Scans a specified directory for files of a specified file extension. Appends the CRC32 in hexadecimal format to the end of the filename as `Romname (CRC32).ext`
+Scans a specified directory for files of a specified file extension. Appends the CRC32 in hexadecimal format to the end of the filename as `Filename (CRC32).ext` Especially useful for locating a base rom needed for a romhack or translation patch.
