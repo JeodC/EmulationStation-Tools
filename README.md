@@ -1,5 +1,5 @@
 # EmulationStation Tools
-Just a repository of python scripts I wrote for various use cases.
+A collection of python scripts I wrote for various use cases as well as desktop icons for some retro handhelds.
 
 ## Parser
 A simple python script to parse gamelist.xml files and output what tags are missing from each game found.
