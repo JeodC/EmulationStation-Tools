@@ -1,10 +1,10 @@
 # EmulationStation Tools
-A collection of python scripts I wrote for various use cases as well as desktop icons for some retro handhelds.
+A collection of python scripts I wrote for various use cases as well as desktop icons for some retro handhelds. Examples come from `Sega Mega Drive & Genesis Classics` collection.
 
 ## Parser
 A simple python script to parse gamelist.xml files and output what tags are missing from each game found.
 
-Usage: ```python parser.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories. Look for output.txt files in a folder created next to wherever you put _parser.py_.
+Usage: `python parser.py` and type your roms directory e.g. `\\RG351P\roms`. The script will only scan the first subdirectory, not nested subdirectories. Look for output.txt files in a folder created next to wherever you put _parser.py_.
 
 Example output file _genesis_output.txt_:
 ```
@@ -17,11 +17,24 @@ Landstalker found with missing tags: video
 ## Sorter
 A simple python script to parse gamelist.xml files and sort them alphabetically by the name tag. Creates backups before parsing.
 
-Usage: ```python sorter.py``` and type your roms directory e.g. ```\\RG351P\roms```. The script will only scan the first subdirectory, not nested subdirectories.
+Usage: `python sorter.py` and type your roms directory e.g. `\\RG351P\roms`. The script will only scan the first subdirectory, not nested subdirectories.
+
+## Sortparse
+A combination of the above two scripts.
 
 ## Savebackup
 A tool that scans immediate directories in the `roms` folder and copies savedata to `saves` next to _savebackup.py_. The script copies Dreamcast memory cards (`bios/dc`) and other emulator savedata `.srm` and `.sav`. 
+
 The file extensions searched can be modified in the script. Because of the complexity of the `roms/ports` folder, it is excluded from the scan.
 
 ## CRC32
-Scans a specified directory for files of a specified file extension. Appends the CRC32 in hexadecimal format to the end of the filename as `Filename (CRC32).ext`. Especially useful for locating a base rom needed for a romhack or translation patch.
+This script is useful for locating a base rom needed for a romhack or translation patch. Scans a specified directory and outputs the CRC32s to a text file.
+
+Usage: `python crc32.py` and type your directory e.g. `\\RG351P\roms\genesis`. The script will not scan subdirectories.
+
+Example output file _genesis_crc32.txt_:
+```
+DYNAHEAD_UE.bin: 3DFEEB77
+ECCO_TidesofTime.bin: CCB21F98
+ECCO_UE.bin: 45547390
+```
