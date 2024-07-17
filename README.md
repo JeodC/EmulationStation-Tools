@@ -38,3 +38,6 @@ DYNAHEAD_UE.bin: 3DFEEB77
 ECCO_TidesofTime.bin: CCB21F98
 ECCO_UE.bin: 45547390
 ```
+
+## muOS-Artscan
+This script makes it easy to bring scraper boxart from other CFWs over to muOS. Add all boxart images to their relevant directories, then run the script. It will remove the `-image` suffix from all files it finds that have it, and make the extension `.png`. It will also remove extra files with the following suffixes: `'-titleshot', '-marquee', '-fanart', '-boxback', '-thumb'`.
