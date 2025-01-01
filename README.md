@@ -45,3 +45,6 @@ This script makes it easy to bring scraper boxart from other CFWs over to muOS. 
 You can modify the `target_size` variable in script to meet a good size for your device. 400x300 is default.
 
 Drop it in your `muOS/info/catalogue` folder and run it from there.
+
+## Install CIA Files
+This `Install CIA Files.sh` file should be placed ideally in your `roms/3ds` folder or `config\modules` for the RockNix Tools menu. It will look in `roms/3ds/cia` for any `.cia` file extensions and install them using the Lime3DS CLI. This is best used for updates and download content.
