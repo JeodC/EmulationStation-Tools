@@ -48,3 +48,27 @@ Drop it in your `muOS/info/catalogue` folder and run it from there.
 
 ## Install CIA Files
 This `Install CIA Files.sh` file should be placed ideally in your `roms/3ds` folder or `config\modules` for the RockNix Tools menu. It will look in `roms/3ds/cia` for any `.cia` file extensions and install them using the Lime3DS CLI. This is best used for updates and download content.
+
+## EmulationStation Gamelist Rebuilder
+If you're importing from ES-DE then you probably have `system.txt` files instead of `gamelist.xml` files, so even if you already have scraped artwork, screenscraper will re-scrape since it assumes artwork is missing. The `rebuild-scraper.py` script remedies that, but only for images. Run the script and provide the path to your roms folder e.g. `\\RG351P\roms` and the script will take care of the rest assuming the artwork in your `images` folder matches the name of the rom in the accompanying system folder.
+
+Suppose you imported scraped artwork for `roms/genesis` and ran `Update Gamelists`, but it didn't get the artwork. Your xml file might look like this.
+
+```xml
+<game>
+    <path>./DYNAHEAD_UE.bin</path>
+    <name>./DYNAHEAD_UE.bin</name>
+</game>
+```
+
+If you have a file `DYNAHEAD_UE-image.png` in your `images` folder (maybe `roms/genesis/images`) then the script will add `<image>./images/DYNAHEAD_UE-image.png</image>` to this xml block.
+
+```xml
+<game>
+    <path>./DYNAHEAD_UE.bin</path>
+    <name>./DYNAHEAD_UE.bin</name>
+    <image>./images/DYNAHEAD_UE-image.png</image>
+</game>
+```
+
+Bear in mind it is not a replacement for screenscraper, so you may still wish to run screenscraper afterwards to get additional metadata.
