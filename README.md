@@ -72,3 +72,6 @@ If you have a file `DYNAHEAD_UE-image.png` in your `images` folder (maybe `roms/
 ```
 
 Bear in mind it is not a replacement for screenscraper, so you may still wish to run screenscraper afterwards to get additional metadata.
+
+## Add Thumbnails
+In support of Noxwell's upcoming dual-screen emulationstation theme [dii-ess-aye](https://github.com/beebono/dii-ess-aye), `add_thumb.py` will probe your gamelist.xml file in the same directory calling the script and use the `<image>` tag to add a `<thumbnail>` tag directing to `thumb.png` in the same folder. This is especially useful for systems `ports` and `windows`.
